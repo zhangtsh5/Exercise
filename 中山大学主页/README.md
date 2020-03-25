@@ -4,4 +4,4 @@
 - html, css, javascript
 
 # 在线预览
-http://zhangtsh5.club/Mysysu/sysu.html
+http://zhangtsh5.club/Exercise/Mysysu/sysu.html
