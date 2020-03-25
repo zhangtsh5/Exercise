@@ -7,4 +7,4 @@
 - html(5),css,原生javascript
 - 数据结构与算法
 # 点击试玩
-https://zhangtsh5.github.io/Exercise/AI五子棋/index.html
+http://zhangtsh5.club/Exercise/AI五子棋/index.html
