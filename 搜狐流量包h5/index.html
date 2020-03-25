@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>Document</title>
+    <script src="./js/rem.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="index">
+    <div>
+        <div class="main">
+            <img class="banner" src="./img/banner.png" alt="东方既白">
+            <div class="adv">
+                <div class="bg">15 GB</div>
+                <div class="souhu">搜狐视频专属流量</div>
+                <div class="price"><span class="num"> 9</span> 元/月</div>
+                <div class="month">
+                    <img src="./img/yuan.png" alt="首月仅需6.6元">
+                </div>
+
+            </div>
+            <div class="days">
+                <p>首月再享<span>7</span>天</p>
+                <img src="./img/souhu-logo.png" alt="搜狐会员">
+                <p>会员</p>
+            </div>
+
+            <div class="form-wrap">
+                <div class="rec">
+                    <img src="./img/rec.png" alt="首月再享7天会员">
+                </div>
+
+                <div class="phone">
+                    <input id="phone" type="text" onkeyup="value=value.replace(/[^\d]/g,'')" maxlength=11
+                           placeholder="请输入手机号码"
+                           autocomplete="off">
+                </div>
+                <div class="code">
+                    <input type="text" maxlength="6"  id="code" placeholder="请输入短信验证码" autocomplete="off">
+                    <div class="sendCode" id="btn" onclick="sendCode()">发送验证码</div>
+                </div>
+                <div class="btn">立即订购</div>
+                <div class="read" onclick="openPupop('rule')">
+                    其它说明>>
+                </div>
+            </div>
+        </div>
+        <div class="pupop">
+            <div class="rule">
+                <img src="./img/rule_close.png" class="close" alt="关闭">
+                <div class="rule_docs">
+                    <span>活动说明</span>
+                    1、活动期内，首次订购阿里包的用户，可享受前6个月7折优惠（6元/月），优惠的话费采用返还或减免优惠，返还话费在月底前到账。从7个月起，恢复原价9元/月。如前期已订购过阿里包的用户，订购价格9元/月。<br />
+                    2、wap不限量套餐用户无法订购。<br />
+                    3、此次活动为中国移动用户专享，在参加活动时请保证电话畅通不欠费。<br />
+                    <span>定向流量使用说明</span>
+                    1、阿里包定向流量免流APP包括：优酷视频、手机淘宝、手机天猫、支付宝、口碑、闲鱼、聚划算、蚂蚁财富。<br />
+                    2、建议办理阿里包的用户，进行以下操作可享受最佳的免流体验： 手机天猫APP升级至8.2.0及以上版本，手机淘宝APP升级至7.0.0及以上版本，支付宝APP升级至10.0.8及以上版本， 闲鱼APP升级至6.0.0以上版本，聚划算APP升级至6.0.0 及以上版本，蚂蚁财富APP升级至5.8及以上版本。 针对上述APP不包含在“定向流量”内的适用范围，特别说明如下：<br />
+                    （1）在手机天猫APP内不包含：由第三方提供的网页与服务、朋友中的分享、H5、小程序 等非手机天猫业务（如星巴克、饿了吗、口碑、大麦、淘票票、阿里健康）。<br />
+                    （2）在优酷APP内不包含：客户端启动、登录及客户端内的图片、文字、视频内插播广告、 弹幕、第三方广告、直播类视频、在线观看／下载／缓存第三方视频所产生的流量。<br />
+                    （3）在支付宝APP内不包含：由第三方提供的网页与服务、朋友中的分享、生活号服务、 小程序等非支付宝业务（如淘票票、优酷、ofo小黄车等）。<br />
+                    （4）在口碑APP内不包含：客户端内的活动图片/文字（例如高温红包等）、第三方ISV服务商提供的图片/文字（例如KFC）、 在线观看第三方视频、合作伙伴提供的频道（例如饿了么外卖）<br />
+                    3、市场解锁、网络VPN代理或运营商模拟等可能会修改手机运营商信息的软件，将导致服务不可用。<br />
+                    4、流量监控、网络加速、权限管理软件，将导致服务不可用。<br />
+                    5、双卡用户切换sim卡将会导致流量扣费。<br />
+                    6、iPhone用户请关闭手机设置-蜂窝移动网络-无线局域网助理。<br />
+                    7、iOS7系统可能会出现网络判断错误的问题，将导致流量扣费。请尽快升级系统到最新版本。<br />
+                    8、使用CMWAP接入点方式访问APP所产生的流量无法免除。<br />
+                    9、用无线上网卡、平板电脑、CPE、MIFI等非手机设备，或使用黑莓、WindowsPhone等其他操作系统产生的流量。<br />
+                    10、通过手机wifi热点等方式使用的流量。<br />
+                    <span>其他说明：</span>
+                    1、产品采用话费支付，订购后立即生效，流量全额提供，仅供当月本机国内（不含港澳台）使用。<br />
+                    2、变更套餐次月生效，每月仅支持一次变更，不支持多次变更，具体规则请咨询当地10086。<br />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function openPupop(name) {
+        closePupop()
+        $('.pupop').show()
+        if (name === undefined) {
+            $('.result-error').show()
+            return
+        }
+        $('.' + name).show()
+
+    }
+    function closePupop() {
+        $('.pupop').hide()
+        $('.pupop > div').hide()
+    }
+    $('.close').click(function () {
+        closePupop()
+    })
+
+    var isClick = false;
+    function sendCode() {
+        if(isClick){
+            return
+        }
+        isClick = true;
+        var len = document.getElementById('phone').value.length;
+        if(len<11) return
+        else {
+            var time = 60;
+
+            if(time === 0){
+                $('.sendCode')[0].innerHTML = `发送验证码`
+            }
+            setInterval(() => {
+                if(time===0){
+                    isClick = false;
+                    return;
+                }
+                time--;
+                if(time < 1){
+                    $('.sendCode')[0].innerHTML = `发送验证码`
+                }
+                else{
+                    $('.sendCode')[0].innerHTML = `${time}s后再次发送`
+                }
+            }, 1000);
+        }
+
+    }
+
+
+
+
+
+
+</script>
+
+</html>

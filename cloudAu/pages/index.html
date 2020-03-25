@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>云微盟首页</title>
+    <script src="../js/rem.js" async></script>
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+<div class="index" id="app">
+    <div class="main">
+        <div class="banner-wrap">
+            <ul>
+                <li v-for="(item, index) in bannerList" :key="index" v-show="index === mark" class="slide-box">
+                    <a href="http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=broadband">
+                        <img :src="item.imgSrc" alt="item.alt" class="banner">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        </a>
+        <div class="tab-wrap">
+            <ul class="tab-box">
+                <li v-for="(item, index) in tabData"
+                    :key="index">
+                    <a :href="item.link">
+                        <div class="tab">
+                            <div class="icon"><img :src="item.imgUrl" alt="item.title"></div>
+                            <p class="title">{{ item.title }}</p>
+                        </div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        <div class="bar">
+            <img src="../img/icon_title.png" alt="可分享业务">
+            <p>可分享业务</p>
+
+        </div>
+        <div class="sales-wrap">
+            <ul class="sale-box">
+                <li v-for="(item, index) in saleData"
+                    :key="index">
+                    <div class="sale">
+                        <img :src="item.imgUrl" :alt="item.title">
+                        <p class="title">{{ item.title }}</p>
+                        <div class="desc">
+                            <span>{{ item.desc1 }}</span>
+                            <span class="money">{{ item.money }}</span>
+                            <span>{{ item.desc2 }}</span>
+                        </div>
+                        <div class="btn">
+                            <a :href="item.link">二维码分享</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <a href="#" class="message">*具体规则请添加“<span class="yun">云微盟</span>”公众号咨询</a>
+    </div>
+</div>
+</body>
+<script src="../js/vue.min.js"></script>
+
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+            mark: 0,
+            message: '*具体规则请添加“云微盟”公众号咨询',
+            tabData: [
+                {
+                    imgUrl: '../img/icon1.png',
+                    title: '佣金查询',
+                    link: 'http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=reward'
+                },
+                {
+                    imgUrl: '../img/icon2.png',
+                    title: '销量查询',
+                    link: 'http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=sale'
+                },
+                {
+                    imgUrl: '../img/icon3.png',
+                    title: '佣金提现',
+                    link: './getMoney.html'
+                },
+            ],
+            saleData: [
+                {
+                    imgUrl: '../img/kuandai.png',
+                    title: '中国移动宽带',
+                    money: '50元',
+                    desc1: '成功办理即得',
+                    desc2: '佣金',
+                    link: 'http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=broadband'
+                },
+                {
+                    imgUrl: '../img/guoman.png',
+                    title: '特惠国漫包',
+                    money: '4.5元',
+                    desc1: '成功办理最高可得',
+                    desc2: '佣金',
+                    link: 'http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=diffusePackage'
+
+                },
+                {
+                    imgUrl: '../img/migu.png',
+                    title: '咪咕中信金卡会员',
+                    money: '7元',
+                    desc1: '成功办理即得',
+                    desc2: '佣金',
+                    link: 'http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=goldCard'
+
+                },
+                {
+                    imgUrl: '../img/changxiang.png',
+                    title: '48元畅享卡',
+                    money: '40元',
+                    desc1: '成功办理即得',
+                    desc2: '佣金',
+                    link: 'http://ysmtest.bmcc.com.cn/app/test/channel-web/template/mobileBusiness/loading.jsp?state=enjoy48'
+
+                }
+
+            ],
+            bannerList: [
+                {
+                    imgSrc: '../img/banner.png',
+                    alt: '推荐好友办理百兆宽带'
+                },
+                {
+                    imgSrc: '../img/banner2.jpg',
+                    alt: '出境旅游 必备神器'
+                },
+                {
+                    imgSrc: '../img/banner3.jpg',
+                    alt: '48元畅享卡'
+                }
+            ]
+        },
+        methods: {
+            autoPlay() {
+                this.mark++;
+                if (this.mark === 3) { //当遍历到最后一张图片置零
+                    this.mark = 0
+                }
+            },
+            play() {
+                setInterval(this.autoPlay, 3000)
+            },
+            change(i) {
+                this.mark = i
+            }
+        },
+        created() {
+            this.play()
+        }
+    });
+</script>
+
+</html>

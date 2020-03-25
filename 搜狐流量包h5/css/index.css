@@ -1,0 +1,483 @@
+@charset "UTF-8";
+/*css 初始化 */
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+div,
+span,
+p,
+em,
+i,
+s,
+header,
+section,
+article,
+nav,
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ios点击黑影 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  outline: none;
+  border: none;
+}
+/*去掉input等聚焦时的蓝色边框*/
+input:focus {
+  border: none;
+}
+select,
+input {
+  vertical-align: middle;
+}
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+  box-sizing: border-box;
+}
+textarea {
+  resize: none;
+}
+/*防止拖动*/
+img {
+  border: 0;
+  display: block;
+}
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table {
+  border-collapse: collapse;
+}
+html {
+  width: 100%;
+  height: 100%;
+}
+.clearfix:before,
+.clearfix:after {
+  /*清浮动*/
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+/*公共类*/
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.al {
+  text-align: left;
+}
+.ac {
+  text-align: center;
+}
+.ar {
+  text-align: right;
+}
+.hide {
+  display: none;
+}
+.index input::-webkit-outer-spin-button,
+.index input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.index input[type="number"] {
+  -moz-appearance: textfield;
+}
+.index input::-ms-input-placeholder {
+  color: #ad2613;
+}
+.index input::-webkit-input-placeholder {
+  color: #ad2613;
+}
+.index input:-ms-input-placeholder {
+  color: #ad2613;
+}
+.index a {
+  text-decoration: none;
+  color: black;
+}
+.index .main {
+  margin: 0;
+  position: relative;
+  background-color: #e4bda4;
+  font-size: 0.3rem;
+}
+.index .main .banner {
+  position: absolute;
+  width: 100%;
+  z-index: -999;
+}
+.index .main .adv {
+  position: absolute;
+  width: 5rem;
+  height: 2.8rem;
+  margin: 0 1.25rem;
+  background: url('../img/adv.png') no-repeat center center;
+  background-size: 5rem;
+  top: 7.6rem;
+}
+.index .main .adv .bg {
+  font-size: 0.6rem;
+  font-weight: bold;
+  color: #fff;
+  width: 2rem;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.3rem;
+}
+.index .main .adv .souhu {
+  font-size: 0.3rem;
+  letter-spacing: 0.01rem;
+  color: #fff;
+  height: 0.4rem;
+  line-height: 0.4rem;
+  position: absolute;
+  left: 0.5rem;
+  top: 1.1rem;
+}
+.index .main .adv .price {
+  width: 1.5rem;
+  height: 0.8rem;
+  position: absolute;
+  left: 0.4rem;
+  padding-left: 0.1rem;
+  top: 1.6rem;
+  letter-spacing: 0.01rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: line-through;
+}
+.index .main .adv .price .num {
+  position: relative;
+  font-size: 0.5rem;
+  top: 0.05rem;
+}
+.index .main .adv .month {
+  position: absolute;
+  border: 1px solid #fff000;
+  border-radius: 0.1rem;
+  width: 2.8rem;
+  height: 0.58rem;
+  background-color: #fff000;
+  right: 0.3rem;
+  bottom: 0.5rem;
+}
+.index .main .adv .month img {
+  width: 90%;
+  margin: 0.12rem;
+}
+.index .main .days {
+  position: absolute;
+  top: 10.2rem;
+  height: 1.6rem;
+  width: 4rem;
+  margin: 0 1.7rem;
+  font-size: 0.32rem;
+  text-align: center;
+  letter-spacing: 0.01rem;
+}
+.index .main .days p {
+  position: relative;
+  bottom: 0.6rem;
+  display: inline;
+  vertical-align: center;
+}
+.index .main .days span {
+  display: inline;
+  color: red;
+  font-size: 0.45rem;
+}
+.index .main .days img {
+  margin: 0.3rem 0.02rem;
+  display: inline;
+  height: 65%;
+}
+.index .main .form-wrap {
+  z-index: -998;
+  top: 8.7rem;
+  position: absolute;
+  height: 8.9rem;
+  width: 7rem;
+  margin: 0 0.25rem;
+  border: 1px solid #faf3e8;
+  border-radius: 0.1rem;
+  background-color: #faf3e8;
+}
+.index .main .form-wrap .rec {
+  position: absolute;
+  width: 5.6rem;
+  top: 2.35rem;
+  margin: 0 0.7rem;
+}
+.index .main .form-wrap .rec img {
+  width: 100%;
+}
+.index .main .form-wrap .phone {
+  position: absolute;
+  width: 6rem;
+  top: 3.7rem;
+  border: 1px solid #fbdecf;
+  height: 0.9rem;
+  border-radius: 0.6rem;
+  margin: 0 0.5rem;
+  background-color: #fbdecf;
+}
+.index .main .form-wrap .phone input {
+  width: 100%;
+  color: #ad2613;
+  font-size: 0.32rem;
+  margin: 0.25rem 0 0.25rem 0.5rem;
+}
+.index .main .form-wrap .code {
+  position: absolute;
+  height: 0.9rem;
+  border-radius: 0.6rem;
+  width: 6rem;
+  top: 5.1rem;
+  margin: 0 0.5rem;
+  background-color: #fbdecf;
+}
+.index .main .form-wrap .code input {
+  width: 2.8rem;
+  font-size: 0.32rem;
+  margin: 0.25rem 0 0.25rem 0.5rem;
+}
+.index .main .form-wrap .code .sendCode {
+  border-radius: 0.5rem;
+  position: absolute;
+  top: 0.1rem;
+  right: 0.1rem;
+  height: 0.7rem;
+  width: 2.4rem;
+  background-color: #fdaf5b;
+  color: #fff;
+  font-size: 0.3rem;
+  line-height: 0.7rem;
+  text-align: center;
+  letter-spacing: 0.01rem;
+}
+.index .main .form-wrap .btn {
+  border: 1px solid #fdaf5b;
+  border-radius: 0.6rem;
+  height: 1rem;
+  background-color: #fdaf5b;
+  text-align: center;
+  font-size: 0.35rem;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.25rem 0;
+  letter-spacing: 0.05rem;
+  position: absolute;
+  width: 6rem;
+  margin: 0 0.5rem;
+  top: 6.5rem;
+}
+.index .main .form-wrap .read {
+  position: absolute;
+  bottom: 0.45rem;
+  border-bottom: 0.05px solid #ad2613;
+  margin: 0 2.5rem;
+  color: #ad2613;
+  font-size: 0.23rem;
+  letter-spacing: 0.02rem;
+}
+.index .pupop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+.index .pupop .btn {
+  background-color: #4fb965;
+  color: #fff;
+}
+.index .pupop > div {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5.4rem;
+  padding-bottom: 0.6rem;
+  background-size: 150%;
+  background-color: #ffffff;
+  border-radius: 0.12rem;
+}
+.index .pupop > div .close {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.24rem;
+  width: 0.24rem;
+  height: 0.24rem;
+}
+.index .pupop > div h2 {
+  padding: 0.62rem 0 0.4rem;
+  text-align: center;
+  font-size: 0.32rem;
+  font-family: FZLTDHJW;
+  font-weight: normal;
+  color: #ffffff;
+}
+.index .pupop > div p {
+  padding: 0.2rem 0.36rem 0;
+  font-size: 0.28rem;
+  text-align: center;
+  font-family: FZLTHJW;
+  font-weight: normal;
+  color: #222222;
+  line-height: 0.4rem;
+  opacity: 0.7;
+  margin-bottom: 0.44rem;
+}
+.index .pupop > div .btn {
+  border-radius: 0.4rem;
+  font-weight: normal;
+}
+.index .pupop > div .btnGroup {
+  display: flex;
+  padding: 0 0.48rem;
+  justify-content: space-between;
+}
+.index .pupop > div .btnGroup .btn {
+  margin: 0;
+  width: 2.06rem;
+  height: 0.7rem;
+  line-height: 0.7rem;
+  border-radius: 0.28rem;
+  background: #F9622E;
+  font-weight: normal;
+  font-size: 0.32rem;
+  font-family: FZLTHJW;
+  font-weight: bold;
+  color: #ffffff;
+}
+.index .pupop > div .btnGroup .btn:nth-child(2) {
+  background: #636363;
+  color: #C1C1C1;
+}
+.index .pupop .result {
+  padding-top: 0.86rem;
+}
+.index .pupop .result h2 {
+  padding: 0;
+  padding-bottom: 0.4rem;
+}
+.index .pupop .result p {
+  padding-top: 0.6rem;
+}
+.index .pupop .result .resPic {
+  width: 3.48rem;
+  margin: 0 auto;
+}
+.index .pupop .result .btn {
+  width: 4rem;
+}
+.index .pupop .rule {
+  position: relative;
+  background: #fff;
+  padding: 0.72rem 0.28rem 0.56rem;
+  height: 70%;
+}
+.index .pupop .rule .close {
+  width: 0.534rem;
+  height: 0.534rem;
+}
+.index .pupop .rule h2 {
+  padding: 0;
+}
+.index .pupop .rule p {
+  padding: 0;
+}
+.index .pupop .rule h2 {
+  text-align: left;
+}
+.index .pupop .rule .rule_docs {
+  height: 100%;
+  overflow-y: scroll;
+  font-size: 0.28rem;
+  font-family: FZLTHJW;
+  font-weight: normal;
+  color: #222222;
+  line-height: 0.4rem;
+  opacity: 0.7;
+  margin-bottom: 0.44rem;
+}
+.index .pupop .rule .rule_docs span {
+  display: block;
+  padding-bottom: 0.2rem;
+  color: #000;
+  font-size: 0.32rem;
+  font-weight: bold;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,135 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #000;
+}
+
+/*居中显示*/
+.circleBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    width: 40px;
+    height: 40px;
+    /*border: 1px solid red;*/
+}
+/*复制上面的4点环，再旋转45度*/
+.circleBox:nth-of-type(2){
+    transform: rotate(45deg);
+}
+
+
+
+@keyframes move{
+    0%{
+        transform:scale(0);
+    }
+    50%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(0);
+    }
+
+}
+@-webkit-keyframes move{
+    0%{
+        transform:scale(0);
+    }
+    50%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(0);
+    }
+}
+
+
+
+/*设置时间差*/
+
+.circleBox:nth-of-type(1) p:nth-of-type(1){
+    animation-delay:-0.1s;
+    -webkit-animation-delay: -0.1s;
+
+}
+
+.circleBox:nth-of-type(2) p:nth-of-type(4){
+    animation-delay:-0.3s;
+    -webkit-animation-delay: -0.3s;
+
+}
+
+.circleBox:nth-of-type(1) p:nth-of-type(4){
+    animation-delay:-0.5s;
+    -webkit-animation-delay: -0.5s;
+
+}
+.circleBox:nth-of-type(2) p:nth-of-type(3){
+    animation-delay:-0.7s;
+    -webkit-animation-delay: -0.7s;
+
+}
+
+.circleBox:nth-of-type(1) p:nth-of-type(3){
+    animation-delay:-0.9s;
+    -webkit-animation-delay: -0.9s;
+
+}
+
+.circleBox:nth-of-type(2) p:nth-of-type(2){
+    animation-delay:-1.1s;
+    -webkit-animation-delay: -1.1s;
+
+}
+
+.circleBox:nth-of-type(1) p:nth-of-type(2){
+    animation-delay:-1.3s;
+    -webkit-animation-delay: -1.3s;
+
+}
+
+.circleBox:nth-of-type(2) p:nth-of-type(1){
+    animation-delay:-1.5s;
+    -webkit-animation-delay: -1.5s;
+
+}
+
+/*圆点*/
+.circleBox p{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    /*!*变小的动画*!*/
+    -webkit-animation: move 1.5s infinite linear;
+    animation: move 1.5s infinite linear;
+}
+
+/*4个点居于四个角*/
+p:nth-of-type(1){
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+p:nth-of-type(2){
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+p:nth-of-type(3){
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+p:nth-of-type(4){
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}

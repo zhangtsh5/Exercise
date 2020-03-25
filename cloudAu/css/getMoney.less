@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+/*css 初始化 */
+html,
+body,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+div,
+span,
+p,
+em,
+i,
+s,
+header,
+section,
+article,
+nav,
+footer {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ios点击黑影 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+fieldset,
+img,
+input,
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline-style: none;
+}
+
+
+
+input {
+  padding-top: 0;
+  padding-bottom: 0;
+  background: none;
+  outline: none;
+  border: none;
+}
+
+/*去掉input等聚焦时的蓝色边框*/
+input:focus {
+  border: none;
+}
+
+select,
+input {
+  vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+  font-size: 12px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+/*防止拖动*/
+img {
+  border: 0;
+  display: block;
+}
+
+/*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table {
+  border-collapse: collapse;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+  /*清浮动*/
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 100%;
+}
+
+/*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,
+i,
+em {
+  font-style: normal;
+  text-decoration: none;
+}
+
+/*公共类*/
+.fl {
+  float: left
+}
+
+.fr {
+  float: right
+}
+
+.al {
+  text-align: left
+}
+
+.ac {
+  text-align: center
+}
+
+.ar {
+  text-align: right
+}
+
+.hide {
+  display: none
+}
+.index{
+  //background-color: #fff;
+  margin:0;
+  .banner{
+    width:100%;
+  }
+  .words{
+    position: relative;
+    .line{
+      position:absolute;
+      z-index: -1;
+      left:0.44rem;
+      top:0.3rem;
+      //bottom:8rem;
+      height:90%;
+
+
+    }
+    .step1{
+
+      .title{
+        font-size:0.35rem;
+        //border:1px solid red;
+        position:relative;
+
+        height:0.7rem;
+        img{
+          height:0.6rem;
+          display: inline;
+          position:absolute;
+          left:0.16rem;
+          top:0.1rem;
+
+        }
+        p{
+          font-weight:bold;
+          display: inline;
+          position:absolute;
+          top:0.15rem;
+          left:1.1rem;
+        }
+
+      }
+      .rule{
+        font-size:0.25rem;
+        line-height:0.4rem;
+        margin:-0.15rem 0.1rem 0 0.6rem;
+        img{
+          display: inline;
+          width:0.27rem;
+        }
+      }
+    }
+    .step2{
+      margin-top:-0.2rem;
+      .title{
+        font-size:0.35rem;
+        //border:1px solid red;
+        position:relative;
+
+        height:0.7rem;
+        img{
+          height:0.6rem;
+          display: inline;
+          position:absolute;
+          left:0.16rem;
+          top:0.1rem;
+
+        }
+        p{
+          font-weight:bold;
+          display: inline;
+          position:absolute;
+          top:0.15rem;
+          left:1.1rem;
+        }
+
+      }
+      .rule{
+        font-size:0.25rem;
+        line-height:0.4rem;
+        margin:-0.15rem 0.1rem 0 0.6rem;
+        img{
+          display: inline;
+          width:0.27rem;
+        }
+      }
+    }
+    .step3{
+
+      margin-top:-0.35rem;
+      .title{
+        font-size:0.35rem;
+        //border:1px solid red;
+        position:relative;
+
+        height:0.7rem;
+        img{
+          height:0.6rem;
+          display: inline;
+          position:absolute;
+          left:0.16rem;
+          top:0.1rem;
+
+        }
+        p{
+          font-weight:bold;
+          display: inline;
+          position:absolute;
+          top:0.15rem;
+          left:1.1rem;
+        }
+
+      }
+
+    }
+  }
+  .code{
+    margin-top:0.5rem;
+    width:100%;
+    img{
+      width:40%;
+      margin:0 30%;
+    }
+  }
+}
+
+

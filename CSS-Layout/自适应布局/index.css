@@ -1,0 +1,115 @@
+/* 公共样式，不需要修改 */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 1200px大屏幕设备 默认情况下就是大屏幕设备*/
+
+
+/* 要修改的属性 */
+header,
+nav,
+section,
+footer {
+  width: 1000px;
+  margin: 0px auto 5px auto;
+}
+.center {
+  width: 580px;
+  margin: 0 10px;
+}
+aside {
+  width: 200px;
+}
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+/* 不需要修改的样式 */
+header,
+nav,
+aside,
+div,
+footer {
+  background: #fc9;
+}
+
+header,
+nav,
+footer {
+  height: 50px;
+}
+
+aside,
+div {
+  height: 300px;
+}
+
+/* 静态布局采用浮动 */
+section > * {
+  float: left;
+}
+
+/* 清除浮动  创建一个不可视块 伪元素*/
+section::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+}
+
+/* 中型设备 */
+@media only screen and (max-width: 1000px) {
+  header,
+  nav,
+  section,
+  footer {
+    width: 790px;
+    margin: 0px auto 5px auto;
+  }
+  .center {
+    width: 580px;
+    /* 去掉右边的margin 因为右边已经没有内容了*/
+    margin: 0px 0px 0px 10px;
+  }
+  aside {
+    width: 200px;
+  }
+  /* 隐藏右边侧栏 */
+  aside:nth-of-type(2) {
+    display: none;
+  }
+  h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+/* 小屏幕设备 */
+@media only screen and (max-width: 768px) {
+  header,
+  nav,
+  section,
+  footer {
+    width: 480px;
+    margin: 0px auto 5px auto;
+  }
+  .center {
+    width: 370px;
+    /* 去掉右边的margin 因为右边已经没有内容了*/
+    margin: 0px 0px 0px 10px;
+  }
+  aside {
+    width: 100px;
+  }
+  /* 隐藏右边侧栏 */
+  aside:nth-of-type(2) {
+    display: none;
+  }
+  h1 {
+    font-size: 12px;
+    text-align: center;
+  }
+}

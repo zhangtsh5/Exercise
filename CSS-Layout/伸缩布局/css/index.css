@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+body{
+  ]width: 100%;
+}
+
+header,
+nav,
+section,
+footer {
+  width: 80%;
+  margin: 0px auto 5px auto;
+}
+
+header,
+nav,
+aside,
+div,
+footer {
+  background: #fc9;
+}
+
+header,
+nav,
+footer {
+  height: 50px;
+}
+
+aside,
+div {
+  height: 300px;
+}
+
+section{
+  /* 开启flex伸缩布局 */
+  display:flex;
+  /* 默认就是 row 行的方式布局 */
+  /* flex-direction:row */ 
+}
+
+aside {
+  /* width: 200px; */
+  flex-basis:200px;
+  /* flex-grow:0; */
+}
+
+.center {
+  /* width: 580px; */
+  flex-basis:580px;
+  /* flex-grow:1; */
+  margin: 0 10px;
+}
+

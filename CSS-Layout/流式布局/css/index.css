@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+header,
+nav,
+section,
+footer {
+  width: 80%;
+  margin: 0 auto 5px auto;
+}
+
+header,
+nav,
+aside,
+div,
+footer {
+  background: #fc9;
+}
+
+header,
+nav,
+footer {
+  height: 50px;
+}
+
+aside,
+div {
+  height: 300px;
+}
+
+/* 静态布局采用浮动 */
+section > * {
+  float: left;
+}
+
+aside {
+  width: 20%;
+}
+
+.center {
+  width: 58%;
+  margin: 0 1%;
+}
+
+/* 清除浮动  创建一个不可视块 伪元素*/
+section::after {
+  content: "";
+  width: 0;
+  height: 0;
+  display: block;
+  clear: both;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <title>佣金提现</title>
+    <script src="../js/rem.js" async></script>
+    <link rel="stylesheet" href="../css/getMoney.css">
+</head>
+
+<body>
+<div class="index" id="app">
+
+    <img class="banner" src="../img/banner.png" alt="推荐好友办理百兆宽带">
+
+    <div class="words">
+        <img class="line" src="../img/line.png" alt="steps">
+        <div class="step1">
+            <div class="title">
+                <img src="../img/icon-list1.png" alt="步骤1">
+                <p>佣金提现流程说明</p>
+            </div>
+            <div class="rule">
+                <ul>
+                    <li><p>截图在微信内识别二维码进行提现。</p></li>
+                    <li>
+                        <p>点击右上角“
+                            <span><img src="../img/fenxiang_bar.png" alt="分享"></span>
+                            ”按钮，分享到微信识别进行提现。
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="step2">
+            <div class="title">
+                <img src="../img/icon-list2.png" alt="步骤2">
+                <p>佣金提现说明</p>
+            </div>
+            <div class="rule">
+                <ul>
+                    <li>
+                        <p>注册用户需在18-60周岁，且支持二代身份证。</p>
+                    </li>
+                    <li>
+                        <p>由于系统割接，2019年5月31日前，6月1日及以后的业务酬金会单独计算、提现、支付，
+                            且5月31日前产生的业务酬金仅会通过银行卡方式提现。</p>
+                    </li>
+                    <li>
+                        <p>由于支付宝账号无法校验准确性，请您准确填写姓名及账号信息，并仔细核对。如
+                            由于输入有误导致相关损失，责任自行承担。</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="step3">
+            <div class="title">
+                <img src="../img/icon-list3.png" alt="步骤3">
+                <p>分享二维码至微信提现</p>
+            </div>
+        </div>
+    </div>
+    <div class="code">
+        <img src="../img/QR_code.png" alt="微信提现">
+    </div>
+
+</div>
+</body>
+
+<script src="../js/vue.min.js"></script>
+
+<script type="text/javascript">
+    new Vue({
+        el:'#app',
+        data: {
+            message:'*具体规则请添加“云微盟”公众号咨询',
+        }
+    });
+    mounted: {
+        defaultShareWx = {
+            title: '云微盟平台',
+            desc: "注册成为推广员，推荐朋友办理业务，解锁赚钱新姿势！",
+            link: 'http://mobilebj.cn:7080/app/cloudAu/pages/getMoney.html',
+            imgUrl: '../img/icon-cloud.png'
+        },
+        window.$APPABILITY.resetAppShare(defaultShareWx)
+    }
+</script>
+
+</html>
