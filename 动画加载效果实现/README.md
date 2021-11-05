@@ -122,8 +122,7 @@ p:nth-of-type(4){
 }
 
 ```
-大概思路就是这样了，整个代码文件以及效果演示视频，请前往
-https://github.com/zhangtsh5/loading-display.git
+大概思路就是这样了
 
 
   
