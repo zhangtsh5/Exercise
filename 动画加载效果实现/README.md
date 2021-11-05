@@ -127,4 +127,4 @@ p:nth-of-type(4){
 
   
 # 点击预览
-http://zhangtsh5.github.io/Exercise/动态加载效果实现/index.html
+http://zhangtsh5.github.io/Exercise/动画加载效果实现/index.html
